@@ -24,6 +24,10 @@ class Queue:
         """Get the length of the _queue"""
         return len(self._queue)
 
+    def peek(self):
+        """ Peeks the element which is about to be removed next"""
+        return self._queue[0]
+
     def __str__(self):
         return f"Queue({self._queue})"
 
@@ -36,6 +40,7 @@ if __name__ == "__main__":
     print(f"Queue length: {queue.length()}")
     print(f"Is empty: {queue.is_empty()}")
     print(f"Queue: {queue}")
+    print(f"Peek: {queue.peek()}")
 
     print(f"Dequeue: {queue.dequeue()}")
     print(f"Dequeue: {queue.dequeue()}")
